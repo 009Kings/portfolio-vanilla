@@ -1,0 +1,156 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+font-family: 'Bungee Shade', cursive;
+font-family: 'Dancing Script', cursive;
+*/
+
+body {
+  background-color: rgb(234, 252, 255);
+}
+
+.splash {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.splash-body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 80%;
+  padding-right: .25rem;
+}
+
+.splash-text {
+  font-family: 'Bungee Shade', cursive;
+  text-align: right;
+  font-size: 6em;
+  padding: 1rem 0;
+  transform: scaleY(2);
+}
+
+.splash-text-subtle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  color: rgb(67, 67, 67);
+  padding-right: .25em;
+}
+
+.info-container {
+  width: 100%;
+  height: 100%;
+  margin: 1em 0;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.info-header-pizazz {
+  height: .5em;
+  width: 50%;
+  background-color: chartreuse;
+  position: absolute;
+  top: 1em;
+  z-index: 2;
+}
+
+.info-header-pizazz--left {
+  left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.info-header-pizazz--right {
+  right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.info-header {
+  font-family: 'Emblema One', cursive;
+  font-size: 2em;
+  padding: 0 1em;
+  z-index: 3;
+  text-shadow:2px 2px 4px rgba(67, 67, 67, 0.317);
+}
+
+.info-header--left {
+  text-align: left;
+}
+
+.info-header--right {
+  text-align: right;
+}
+
+.info-body {
+  border: 2px solid rgb(156, 150, 150);
+  margin: 1em 1.5em;
+  padding: 2em 1em;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 9px 7px 11px 0px #39393954;
+  position: relative;
+  z-index: inherit;
+}
+
+.info-body-pizazz {
+  height: 20em;
+  width: 20em;
+  border-radius: 50%;
+  background-color: hotpink;
+  z-index: 1;
+  position: absolute;
+  top: 1em;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 500px) {
+  .splash-text {
+    font-size: 20vw;
+  }
+  
+  .splash-text-subtle {
+    padding-top: .5em
+  }
+
+  .info-header-pizazz {
+    height: .75em;
+    top: 1.25em;
+  }
+
+  .info-header {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .splash-text {
+    font-size: 181px;
+  }
+  
+  .splash-text-subtle {
+    font-size: 4em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .splash-text {
+    letter-spacing: 3vw;
+  }
+
+  .info-header-pizazz {
+    height: .75em;
+    top: 1.5em;
+  }
+
+  .info-header {
+    font-size: 3em;
+  }
+}
