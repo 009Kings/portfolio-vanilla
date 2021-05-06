@@ -9,8 +9,18 @@ font-family: 'Bungee Shade', cursive;
 font-family: 'Dancing Script', cursive;
 */
 
+html {
+  overflow-x: hidden;
+  text-align: left;
+}
+
 body {
   background-color: rgb(234, 252, 255);
+  
+}
+
+p {
+  font-family: 'Prompt', sans-serif;
 }
 
 .splash {
@@ -25,6 +35,7 @@ body {
   align-items: flex-end;
   height: 80%;
   padding-right: .25rem;
+  z-index: 1;
 }
 
 .splash-text {
@@ -33,6 +44,10 @@ body {
   font-size: 6em;
   padding: 1rem 0;
   transform: scaleY(2);
+  background-color:chartreuse;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* color: transparent; */
 }
 
 .splash-text-subtle {
@@ -49,12 +64,11 @@ body {
   display: flex;
   flex-flow: column nowrap;
   position: relative;
-  z-index: 1;
 }
 
 .info-header-pizazz {
   height: .5em;
-  width: 50%;
+  width: 75%;
   background-color: chartreuse;
   position: absolute;
   top: 1em;
@@ -89,6 +103,26 @@ body {
   text-align: right;
 }
 
+.info-body-pizazz {
+  height: 80vw;
+  width: 80vw;
+  border-radius: 50%;
+  background: linear-gradient(#ff9bd2, #95aeee);
+  z-index: 0;
+  position: absolute;
+  margin-top: -15%;
+}
+
+.info-body-pizazz--left {
+  left: 5%;
+  margin-left: -15%;
+}
+
+.info-body-pizazz--right {
+  right: 5%;
+  margin-right: -15%;
+}
+
 .info-body {
   border: 2px solid rgb(156, 150, 150);
   margin: 1em 1.5em;
@@ -97,18 +131,11 @@ body {
   border-radius: 3px;
   box-shadow: 9px 7px 11px 0px #39393954;
   position: relative;
-  z-index: inherit;
+  z-index: 1;
 }
 
-.info-body-pizazz {
-  height: 20em;
-  width: 20em;
-  border-radius: 50%;
-  background-color: hotpink;
-  z-index: 1;
-  position: absolute;
-  top: 1em;
-  margin: 0 auto;
+.info-body-text {
+  font-size: 1.25em;
 }
 
 @media screen and (min-width: 500px) {
@@ -128,6 +155,16 @@ body {
   .info-header {
     font-size: 2.5em;
   }
+
+  .info-body-pizazz {
+    height: 70vw;
+    width: 70vw;
+  }
+
+  .info-body {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -138,9 +175,22 @@ body {
   .splash-text-subtle {
     font-size: 4em;
   }
+
+  .info-body-pizazz {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  .info-body {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
+  .info-container {
+    padding: 0 1em;
+  }
+
   .splash-text {
     letter-spacing: 3vw;
   }
@@ -152,5 +202,9 @@ body {
 
   .info-header {
     font-size: 3em;
+  }
+
+  .info-body {
+    width: 65%;
   }
 }
