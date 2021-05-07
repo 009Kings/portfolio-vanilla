@@ -1,0 +1,55 @@
+.brand-statement {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.info-sub-section {
+  margin: 2em 0;
+}
+
+.info-sub-header {
+  font-family: 'Emblema One';
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.filters-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.filter-btn {
+  width: 45%;
+  height: 4em;
+  margin: .25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(128, 0, 255);
+  background-color: rgba(128, 0, 255, 0.375);
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .05em;
+  transition: box-shadow .2s ease-in-out;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  box-shadow: 2px 5px 4px rgba(118, 118, 118, 0.774);
+}
+
+.selected {
+  border-color: rgb(2, 145, 143);
+  background-color: rgb(2, 145, 143, 0.375);
+}
+
+
+/* --------------- Break points-------------- */
+/* 
+@media screen and (min-width: 500px)
+@media screen and (min-width: 900px)
+@media screen and (min-width: 1000px)
+*/

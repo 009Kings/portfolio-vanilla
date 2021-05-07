@@ -109,6 +109,12 @@ p {
 }
 
 /* --------------- Break points-------------- */
+/* 
+@media screen and (min-width: 500px)
+@media screen and (min-width: 900px)
+@media screen and (min-width: 1000px)
+*/
+
 @media screen and (min-width: 500px) {
   .info-header-pizazz {
     height: .75em;

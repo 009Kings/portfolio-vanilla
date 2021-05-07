@@ -37,12 +37,33 @@ let rotateLikes = setInterval(() => {
 
 setTimeout(() => {
   noun.className = 'fade-out'
-  setInterval(() => noun.className = "fade-out", 5000)
+  setInterval(() => noun.className = 'fade-out', 5000)
 }, 3000)
 setTimeout(() => {
   noun.className = 'fade-in'
-  setInterval(() => noun.className = "fade-in", 5000)
+  setInterval(() => noun.className = 'fade-in', 5000)
 }, 5001)
 
 // --------- Why
-// Skills
+const setFilter = (e, obj) => {
+  obj.ref.classList.remove('selected');
+  obj.ref = e.target;
+  e.target.classList.add('selected');
+  obj.name = e.target.innerText;
+}
+
+// Populate Skills
+
+// Filter click
+let skillFilter = {
+  name: 'All',
+  ref: document.querySelector('.skills .filter-btn')
+}
+let expFilter = {
+  name: 'All',
+  ref: document.querySelector('.experience .filter-btn')
+}
+
+document.querySelector('.skills .filters-container').addEventListener('click', e => setFilter(e, skillFilter))
+
+document.querySelector('.experience .filters-container').addEventListener('click', e => setFilter(e, expFilter))
