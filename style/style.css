@@ -9,14 +9,12 @@ font-family: 'Bungee Shade', cursive;
 font-family: 'Dancing Script', cursive;
 */
 
-html {
-  text-align: left;
-}
-
 body {
   background-color: rgb(234, 252, 255);
+  text-align: left;
+}
+.app {
   overflow-x: hidden;
-  
 }
 
 p {
