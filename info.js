@@ -98,18 +98,18 @@ const data = {
         "summary": "This informational website about gentrification in Seattle (2019) was created as a collaboration with User Designers and a Data Scientist for General Assembly's 'Data for Good' Hackathon",
         "tech": ["React", "Mapbox", "Chart.js", "CSS"],
         "photo": null,
-        "link": "https://seattle-gentrified.herokuapp.com/",
+        "link": "http://seattle-gentrified.axelmagn.com/",
         "github": "https://github.com/009Kings/seattle-gentrified"
       }, {
         "title": "Dem Dice",
-        "summary": "A small dice-rolling mobile application using hand-made art assets",
+        "summary": "Built a streamlined dice-rolling app with my own original art in order to develop my skills in user-centric design on mobile platforms",
         "tech": ["DART", "Flutter"],
         "photo": null,
         "link": null,
         "github": "https://github.com/009Kings/Dem_Dice"
       }, {
         "title": "Syllaboard",
-        "summary": "A collaborative project intended to help organize deliverables for instructors and students at General Assembly",
+        "summary": "Worked with a team of engineers to develop a learning management system for adult education classroom management",
         "tech": ["MongoDB", "TypeORM", "React", "Redux", "Material UI"],
         "photo": null,
         "link": null,

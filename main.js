@@ -55,7 +55,7 @@ const makeSummary = project => {
   container.append(header);
   // Summary
   if (project.summary) {
-    let summary = document.createElement('div');
+    let summary = document.createElement('p');
     summary.className = 'experience-list-item-summary';
     summary.textContent = project.summary;
     container.append(summary);
@@ -78,7 +78,8 @@ const makeSummary = project => {
 
     return techContainer;
   })
-  techList.forEach(elem => container.append(elem));
+  techList.forEach(elem => tech.append(elem));
+  container.append(tech);
   // Links
   let links = document.createElement('div');
   links.className = 'experience-list-item-links';
@@ -86,11 +87,13 @@ const makeSummary = project => {
   let liveLink = document.createElement('a');
   liveLink.className = `experience-list-item-link ${project.link ? '' : 'disabled'}`;
   liveLink.href = project.link
+  liveLink.target = '_blank';
   liveLink.textContent = 'Live Link';
 
   let github = document.createElement('a');
   github.className = `experience-list-item-link ${project.github ? '' : 'disabled'}`;
   github.href = project.github;
+  github.target = '_blank';
   github.textContent = 'Github Link'
 
   links.append(liveLink);

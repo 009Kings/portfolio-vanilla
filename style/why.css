@@ -46,6 +46,7 @@
   background-color: rgb(2, 145, 143, 0.375);
 }
 
+/* --------------- Skills -------------- */
 .skill-strings {
   font-size: 1.5em;
   font-weight: 600;
@@ -65,7 +66,116 @@
   color: rgb(152, 2, 2);
 }
 
-/* --------------- Break points-------------- */
+/* --------------- Experience -------------- */
+.experience-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+  height: fit-content;
+}
+
+.experience-list-item-header {
+  font-size: 1.5em;
+  font-family: 'Roboto Mono', monospace;
+  padding-bottom: .25em;
+  border-bottom: 3px solid chartreuse;
+}
+
+.experience-list-item-summary {
+  text-indent: 2em;
+}
+
+.experience-list-item-tech {
+  margin: 1em 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.experience-list-item-tech-item {
+  position: relative;
+  width: 10em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.experience-list-item-tech-item-pizazz {
+  z-index: 0;
+  position: absolute;
+  top: -.5em;
+  left: 50%;
+  margin-left: -2em;
+  width: 0; 
+  height: 0; 
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+  
+  border-top: 4em solid rgba(0, 166, 255, 0.797);
+}
+
+.experience-list-item-tech-item-name {
+  font-weight: 600;
+  font-size: 1.1em;
+  word-spacing: .2em;
+  background-color: rgb(9, 255, 0, .48);
+  border-radius: 5px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: .5em;
+  position: relative;
+  z-index: 3;
+}
+
+.experience-list-item-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.experience-list-item-link {
+  width: 10em;
+  padding: 1em;
+  margin: 1em;
+
+  border-spacing: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  border-left: none;
+  border-right: none;
+  border-top-color: #fa9e48;
+  border-bottom-color: #f251fa;
+  background: linear-gradient(#ffa651, #f76bff);
+
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Prompt', sans-serif;
+  letter-spacing: .1em;
+  font-size: 1.25em;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.experience-list-item-link:hover {
+  box-shadow: 2px 5px 4px rgba(118, 118, 118, 0.774);
+}
+
+.disabled {
+  color: #454545;
+  border-spacing: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  border-left: none;
+  border-right: none;
+  border-top-color: #dbdada;
+  border-bottom-color: #7d7c7c;
+  background: linear-gradient(#dedddd, #828181);
+  pointer-events: none;
+}
+
+/* --------------- Break points -------------- */
 /* 
 @media screen and (min-width: 500px)
 @media screen and (min-width: 900px)
