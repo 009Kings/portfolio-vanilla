@@ -160,7 +160,6 @@ p {
   transition: cubic-bezier(1, 0, 0, 1);
 }
 
-/* test */
 .fade-out {
   animation: fadeOut ease 2s;
   -webkit-animation: fadeOut ease 2s;
@@ -195,6 +194,27 @@ p {
   }
 }
 
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin: 1em;
+}
+
+.social-icon {
+  height: 6em;
+  width: 6em;
+}
+
+/* --------------- Break points-------------- */
 @media screen and (min-width: 500px) {
   .splash-text {
     font-size: 20vw;
@@ -292,6 +312,10 @@ p {
   .descriptor-4 {
     margin-left: 40%;
     margin-right: -10%;
+  }
+
+  .social-links {
+    flex-direction: row;
   }
 }
 

@@ -11,6 +11,7 @@
   <script src="main.js" defer></script>
 </head>
 <body>
+  <!-- Splash Page -->
   <div class="splash">
     <section class="info-container">
       <div class="info-header-pizazz info-header-pizazz--right"></div>
@@ -22,7 +23,7 @@
       </div>
     </section>
   </div>
-
+  <!-- What -->
   <section class="info-container">
     <div class="info-header-pizazz info-header-pizazz--left"></div>
     <header class="info-header info-header--left">what</header>
@@ -37,18 +38,35 @@
       </div>
     </div>
   </section>
+  <!-- Where -->
   <section class="info-container">
     <div class="info-header-pizazz info-header-pizazz--right"></div>
     <header class="info-header info-header--right">Where</header>
     <div class="info-body-pizazz info-body-pizazz--right"></div>
     <div class="info-body">
       <div class="info-body-text">
-        <div class="social-link" style="background-color: black;">
-          <img src="./style/assets/GitHub-Mark-Light-64px.png">
+        <div class="social-links">
+          <a class="social-link" href="https://github.com/009kings/" target="_blank">
+            <img class="social-icon" src="./assets/GitHub.png">
+            <p class="social-name">Github</p>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/sarah-king-wang-shasha/" target="_blank">
+            <img class="social-icon" src="./assets/LinkedIn-black.png">
+            <p class="social-name">LinkedIn</p>
+          </a>
+          <a class="social-link" href="mailto:009kings@gmail.com" target="_blank">
+            <img class="social-icon" src="./assets/email.png">
+            <p class="social-name">Email</p>
+          </a>
+          <a class="social-link" href="./assets/Sarah_King_Resume.pdf" download>
+            <img class="social-icon" src="./assets/email.png">
+            <p class="social-name">Resume</p>
+          </a>
         </div>
       </div>
     </div>
   </section>
+  <!-- Why -->
   <section class="info-container">
     <div class="info-header-pizazz info-header-pizazz--left"></div>
     <header class="info-header info-header--left">Why</header>
@@ -56,6 +74,31 @@
     <div class="info-body">
       <div class="info-body-text">
         Why me?
+      </div>
+    </div>
+  </section>
+  <!-- When -->
+  <section class="info-container">
+    <div class="info-header-pizazz info-header-pizazz--right"></div>
+    <header class="info-header info-header--right">When</header>
+    <div class="info-body-pizazz info-body-pizazz--right"></div>
+    <div class="info-body">
+      <div class="info-body-text">
+        <form action="mailto:009kings@gmail.com" enctype=”multipart/form-data” method="post">
+          <div class="form-group">
+            <label for="Name">Name: </label>
+            <input type="text" id="Name" name="Name" required>
+          </div>
+          <div class="form-group">
+            <label for="Email">Email: </label>
+            <input type="text" id="Email" name="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="Message">Message: </label>
+            <input type="text" id="Message" name="Message" required>
+          </div>
+          <input type="submit" value="Send">
+        </form>
       </div>
     </div>
   </section>
