@@ -124,7 +124,7 @@ p {
 }
 
 .info-body {
-  width: fit-content;
+  width: 90%;
   border: 2px solid rgb(156, 150, 150);
   margin: 1em auto;
   padding: 2em;
@@ -266,6 +266,31 @@ p {
 
   .info-body {
     width: 65%;
+  }
+
+  .info-body-text {
+    width: 100%;
+  }
+
+  .descriptor-0 {
+    margin-left: -0%;
+  }
+
+  .descriptor-1 {
+    margin-left: 10%;
+  }
+
+  .descriptor-2 {
+    margin-left: 20%;
+  }
+
+  .descriptor-3 {
+    margin-left: 30%;
+  }
+
+  .descriptor-4 {
+    margin-left: 40%;
+    margin-right: -10%;
   }
 }
 
