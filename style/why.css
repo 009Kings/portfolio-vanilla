@@ -48,18 +48,21 @@
 
 .skill-strings {
   font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: .05em;
+  word-spacing: .25em;
 }
 
 .skill-strings-Languages {
-  color: rgb(5, 79, 208);
+  color: rgb(230, 146, 0);
 }
 
 .skill-strings-Databases {
-  color: rgb(152, 2, 2);
+  color: rgb(149, 0, 255);
 }
 
 .skill-strings-FNT {
-  color: rgb(149, 0, 255);
+  color: rgb(152, 2, 2);
 }
 
 /* --------------- Break points-------------- */
