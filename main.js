@@ -1,5 +1,5 @@
 // --------- Helper Functions
-const randoRGB = () => Math.floor(Math.random()*256)
+const randoRGB = () => Math.floor(Math.random()*256);
 
 // --------- Emphasis
 let descriptors = document.querySelectorAll('.emphasis');
@@ -45,14 +45,60 @@ setTimeout(() => {
 }, 5001)
 
 // --------- Why
-const setFilter = (e, obj) => {
+const setFilter = (e, obj, displayFunc) => {
   obj.ref.classList.remove('selected');
   obj.ref = e.target;
   e.target.classList.add('selected');
   obj.name = e.target.innerText;
+  displayFunc();
 }
 
 // Populate Skills
+data.skills.forEach(skill => {
+  let lang = document.querySelector('.skill-strings-Languages');
+  let dbs = document.querySelector('.skill-strings-Databases');
+  let fnt = document.querySelector('.skill-strings-FNT');
+  switch (skill.category) {
+    case 'Languages':
+      lang.innerText = `${lang.innerText}${lang.innerText ? ',' : ''} ${skill.name}`
+      break;
+    case 'Frameworks and Tools':
+      fnt.innerText = `${fnt.innerText}${fnt.innerText ? ',' : ''} ${skill.name}`
+      break;
+    case 'Databases':
+      dbs.innerText = `${dbs.innerText}${dbs.innerText ? ',' : ''} ${skill.name}`
+      break;
+  }
+})
+
+const displaySkills = () => {
+  let lang = document.querySelector('.skill-strings-Languages');
+  let dbs = document.querySelector('.skill-strings-Databases');
+  let fnt = document.querySelector('.skill-strings-FNT');
+
+  switch (skillFilter.name) {
+    case 'Languages':
+      lang.classList.remove('hidden');
+      dbs.classList.add('hidden');
+      fnt.classList.add('hidden');
+      break;
+    case 'Databases':
+      lang.classList.add('hidden');
+      dbs.classList.remove('hidden');
+      fnt.classList.add('hidden');
+      break;
+    case 'Frameworks & Tools':
+      lang.classList.add('hidden');
+      dbs.classList.add('hidden');
+      fnt.classList.remove('hidden');
+      break;
+    default:
+      lang.classList.remove('hidden');
+      dbs.classList.remove('hidden');
+      fnt.classList.remove('hidden');
+      break;
+  }
+}
 
 // Filter click
 let skillFilter = {
@@ -64,6 +110,6 @@ let expFilter = {
   ref: document.querySelector('.experience .filter-btn')
 }
 
-document.querySelector('.skills .filters-container').addEventListener('click', e => setFilter(e, skillFilter))
+document.querySelector('.skills .filters-container').addEventListener('click', e => setFilter(e, skillFilter, displaySkills))
 
 document.querySelector('.experience .filters-container').addEventListener('click', e => setFilter(e, expFilter))
