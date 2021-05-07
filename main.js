@@ -10,7 +10,7 @@ descriptors.forEach(descriptor => {
   descriptor.style.backgroundColor = `rgb(${baseColor[0]}, ${baseColor[1]}, ${baseColor[2]}, 0.375)`
 })
 
-// -------- Enthusiast
+// --------- Enthusiast
 let likes = [
   'mountain',
   'dog',
@@ -43,3 +43,6 @@ setTimeout(() => {
   noun.className = 'fade-in'
   setInterval(() => noun.className = "fade-in", 5000)
 }, 5001)
+
+// --------- Why
+// Skills

@@ -1,0 +1,56 @@
+.splash {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.splash-body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 80%;
+  padding-right: .25rem;
+  z-index: 1;
+}
+
+.splash-text {
+  font-family: 'Bungee Shade', cursive;
+  text-align: right;
+  font-size: 6em;
+  padding: 1rem 0;
+  transform: scaleY(2);
+}
+
+.splash-text-subtle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  color: rgb(67, 67, 67);
+  padding-right: .25em;
+}
+
+/* --------------- Break points-------------- */
+@media screen and (min-width: 500px) {
+  .splash-text {
+    font-size: 20vw;
+  }
+  
+  .splash-text-subtle {
+    padding-top: .5em
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .splash-text {
+    font-size: 181px;
+  }
+  
+  .splash-text-subtle {
+    font-size: 4em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .splash-text {
+    letter-spacing: 3vw;
+  }
+}

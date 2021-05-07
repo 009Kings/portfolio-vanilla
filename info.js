@@ -1,4 +1,4 @@
-{
+const data = {
   "name": "Sarah King",
   "brand_statement": "Pairing emotional intelligence with a strong foundation in full-stack development, I am passionate about applying technology to solve meaningful problems. I enjoy projects that use well-suited tools and keep human benefit at the forefront.",
   "skills": [
@@ -33,6 +33,9 @@
       "name": "Flutter",
       "category": "Frameworks and Tools"
     }, {
+      "name": "React Native",
+      "category": "Frameworks and Tools"
+    }, {
       "name": "Flask",
       "category": "Frameworks and Tools"
     }, {
@@ -49,9 +52,6 @@
       "category": "Frameworks and Tools"
     }, {
       "name": "Materialize",
-      "category": "Frameworks and Tools"
-    }, {
-      "name": "Tachyons",
       "category": "Frameworks and Tools"
     }, {
       "name": "PostgreSQL",
