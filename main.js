@@ -88,13 +88,13 @@ const makeSummary = project => {
   liveLink.className = `experience-list-item-link ${project.link ? '' : 'disabled'}`;
   liveLink.href = project.link
   liveLink.target = '_blank';
-  liveLink.textContent = 'Live Link';
+  liveLink.textContent = 'Website';
 
   let github = document.createElement('a');
   github.className = `experience-list-item-link ${project.github ? '' : 'disabled'}`;
   github.href = project.github;
   github.target = '_blank';
-  github.textContent = 'Github Link'
+  github.textContent = 'Code'
 
   links.append(liveLink);
   links.append(github);
