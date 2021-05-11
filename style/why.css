@@ -91,28 +91,29 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
 .experience-list-item-tech-item {
   position: relative;
-  width: 10em;
+  width: fit-content;
+  min-width: 8em;
   text-align: center;
-  margin: 1em 0;
+  margin: 1em .5em;
 }
 
 .experience-list-item-tech-item-pizazz {
   z-index: 0;
   position: absolute;
-  top: -.5em;
+  top: 0;
   left: 50%;
   margin-left: -2em;
+  margin-top: -.5em;
   width: 0; 
   height: 0; 
   border-left: 2em solid transparent;
   border-right: 2em solid transparent;
-  
   border-top: 4em solid rgba(0, 166, 255, 0.797);
 }
 
