@@ -16,6 +16,7 @@
 .social-icon {
   height: 6em;
   width: 6em;
+  object-fit:contain;
 }
 
 /* --------------- Break points-------------- */
