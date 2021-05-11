@@ -98,7 +98,7 @@
 .experience-list-item-tech-item {
   position: relative;
   width: fit-content;
-  min-width: 8em;
+  min-width: 6em;
   text-align: center;
   margin: 1em .5em;
 }
