@@ -15,17 +15,16 @@ let likes = [
   'mountain',
   'dog',
   'woodworking', 
-  'compassion',
+  'altruism',
   'plant',
-  'woodworking',
-  'love',
+  'Seattle',
   'art',
   'D&D',
   'growth',
   'video game',
   'Rainier',
   'good vibes',
-  'Cork',
+  'music',
 ];
 let currentIndex = 0;
 

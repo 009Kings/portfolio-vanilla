@@ -1,6 +1,6 @@
 const data = {
   "name": "Sarah King",
-  "brand_statement": "Pairing emotional intelligence with a strong foundation in full-stack development, I am passionate about applying technology to solve meaningful problems. I enjoy projects that use well-suited tools and keep human benefit at the forefront.",
+  "brand_statement": "I am a creative and people oriented software engineer with vast expertise in programing languages, documentation, accessible design, and key relationship management. I have established capabilities in web development, code review, testing and implantation, and technical support. I utilize my strong interpersonal and communications skills to guide and develop high-performing teams that produce exceptional results on projects. I am an analytical and consistent high-performer who delivers efficiency and visibility for an organization.",
   "skills": [
     {
       "name": "Javascript",
@@ -45,9 +45,6 @@ const data = {
       "name": "Express",
       "category": "Frameworks and Tools"
     }, {
-      "name": "Apollo",
-      "category": "Frameworks and Tools"
-    }, {
       "name": "Material UI",
       "category": "Frameworks and Tools"
     }, {
@@ -76,84 +73,153 @@ const data = {
       "category": "Databases"
     }
   ],
+  "experience": [
+    {
+      "title": "Software Engineer II",
+      "company": "Legacy.com",
+      "location": "Chicago, Illinois",
+      "remote": true,
+      "years": "2022-2023",
+      "description": "Created new features and fixed existing bugs. Worked closely with UX designer to implement accessible design. Translated design from design and product to feature implementations on front end. Collaborated with engineers on pair programming. Performed code review and wrote tests.",
+      "accomplishments": [
+        "Conducted creation of feature that increased site engagement by 35%.",
+        "Implemented and contributed to over 55 pull requests over seven-month tenure.",
+        "Conducted major documentation refresh across all project verticals consisting of eight updated pages facilitating on-boarding of new hires."
+      ]
+    }, {
+      "title": "Software Development Educator",
+      "company": "ThriveDX",
+      "location": "Miami, Florida",
+      "remote": true,
+      "years": "2021-2022",
+      "description": "Maintained and created curriculum to keep up with development trends on subjects relating to full-stack development, web applications, and data storage design.",
+      "accomplishments": [
+        "Authored code to integrate internal Learning Management System development pipeline with CI/CD processes.",
+        "Led documentation effort of critical legacy infrastructure to accelerate company-wide product engineering."
+      ]
+    }, {
+      "title": "Instructional Lead",
+      "company": "General Assembly",
+      "location": "Seattle, Washington",
+      "remote": true,
+      "years": "2020-2021",
+      "description": "Delivered lessons on foundational knowledge regarding web application development and computer science.",
+      "accomplishments": [
+        "Graduated 67 developers and provided instructional assistance to over 200.",
+        "Achieved NPS scores consistently over 90.",
+        "Wrote Flask/SQLAlchemy curriculum."
+      ]
+    }, {
+      "title": "Developer in Residence",
+      "company": "General Assembly",
+      "location": "Seattle, Washington",
+      "remote": false,
+      "years": "2019-2020",
+      "description": "Conducted code review and acted as primary escalation point for student troubleshooting. Updated and maintained full-stack authentication examples in multiple stacks.",
+      "accomplishments": [
+        "Organized four interdisciplinary hackathon events (in person and virtual)."
+      ]
+    }, {
+      "title": "Freelance Web Developer",
+      "company": "Various",
+      "location": "Seattle, Washington",
+      "remote": true,
+      "years": "2019-2020",
+      "description": "Designed, developed and maintained websites using HTML/CSS and Javascript",
+      "accomplishments": [
+        "Increased client profitability by 100%."
+      ]
+    }
+  ],
   "programming": {
-    "freelance": [
+    "professional": [
       {
+        "title": "Legacy.com",
+        "summary": "Online obituary service",
+        "tech": ["React", "Django", "Jenkins", "SQL", "Python", "HTML", "CSS", "Javascript"],
+        "photo": null,
+        "link": "https://www.laurawally.com/",
+        "linkType": "site"
+      },{
         "title": "Laura Wally Johnston",
         "summary": "Portfolio for freelance editor Laura Wally Johnston",
         "tech": ["HTML", "CSS", "Javascript"],
         "photo": null,
-        "link": "https://www.laurawally.com/"
+        "link": "https://www.laurawally.com/",
+        "linkType": "site"
       }, {
         "title": "Seattle Dharma Center",
         "summary": "Website for teachings and information from Dzogchen Buddha Path's Seattle Sangha",
         "tech": ["HTML", "CSS", "Javascript"],
         "photo": null,
-        "link": "http://www.seattledharmacenter.com/"
+        "link": null,
+        "linkType": null
       }
     ],
-    "projects": [
+    "personalProjects": [
       {
         "title": "Seattle Gentrified",
         "summary": "This informational website about gentrification in Seattle (2019) was created as a collaboration with User Designers and a Data Scientist for General Assembly's 'Data for Good' Hackathon",
         "tech": ["React", "Mapbox", "Chart.js", "CSS"],
         "photo": null,
         "link": "http://seattle-gentrified.axelmagn.com/",
-        "github": "https://github.com/009Kings/seattle-gentrified"
+        "linkType": "site"
       }, {
         "title": "Dem Dice",
         "summary": "Built a streamlined dice-rolling app with my own original art in order to develop my skills in user-centric design on mobile platforms",
         "tech": ["DART", "Flutter"],
         "photo": null,
-        "link": null,
-        "github": "https://github.com/009Kings/Dem_Dice"
+        "link": "https://github.com/009Kings/Dem_Dice",
+        "linkType": "code"
       }, {
         "title": "Syllaboard",
         "summary": "Worked with a team of engineers to develop a learning management system for adult education classroom management",
         "tech": ["MongoDB", "TypeORM", "React", "Redux", "Material UI"],
         "photo": null,
-        "link": null,
-        "github": "https://github.com/parkercouch/syllaboard-client"
+        "link": "https://github.com/parkercouch/syllaboard-client",
+        "linkType": "code"
       }, {
         "title": "Spellsword",
         "summary": "A full stack web application that queries the DnD5e API to create and store spellbooks for Dungeons and Dragons characters to make spell management easier",
         "tech": ["PostgreSQL", "Sequelize", "Node.js", "Express", "EJS"],
         "photo": null,
-        "link": "https://spellsword.herokuapp.com/",
-        "github": "https://github.com/009Kings/Spellsword"
+        "link": "https://github.com/009Kings/Spellsword",
+        "linkType": "code"
       }, {
         "title": "Bee Free: Pollination Station",
         "summary": "Play as a busy little bee pollinating flowers in this cute web platformer. With self-made art assets, this game can be enjoyed with challenge or in zen mode",
         "tech": ["HTML", "CSS", "Javascript", "HTML5 Canvas"],
         "photo": null,
         "link": "https://009kings.github.io/beeFree/",
-        "github": "https://github.com/009Kings/beeFree"
+        "linkType": "site"
       }
     ],
     "educational": [
       {
         "title": "Canvas Crawler",
         "tech": ["HTML5 Canvas", "HTML", "Javascript"],
-        "link": "https://github.com/WDI-SEA/canvas-crawler/blob/master/readme.md",
-        "github": "https://github.com/WDI-SEA/canvas-crawler"
+        "link": "https://github.com/WDI-SEA/canvas-crawler",
+        "linkType": "code"
       }, {
         "title": "Intro to Python Concepts",
         "tech": ["Python"],
-        "link": "https://gawdiseattle.gitbook.io/wdi/python",
-        "github": "https://github.com/WDI-SEA/notes/tree/master/15-python/python-intro"
+        "link": null,
+        "linkType": null
       }, {
         "title": "Scripting in Python",
         "tech": ["Python"],
-        "link": "https://gawdiseattle.gitbook.io/wdi/python/python-adjacent-topics/scripting",
-        "github": "https://github.com/WDI-SEA/notes/blob/master/15-python/python-adjacent-topics/scripting.md"
+        "link": null,
+        "linkType": null
       }, {
         "title": "Intro to SQLAlchemy",
         "tech": ["Python", "PostgreSQL", "SQLALchemy"],
-        "link": "https://gawdiseattle.gitbook.io/wdi/python/intro"
+        "link": null,
+        "linkType": null
       }, {
         "title": "SQLAlchemy and Flask",
         "tech": ["Python", "PostgreSQL", "SQLALchemy", "Flask"],
-        "link": "https://gawdiseattle.gitbook.io/wdi/python/intro/flask_sqlalchemy"
+        "link": null,
+        "linkType": null
       }
     ]
   },
@@ -161,6 +227,6 @@ const data = {
     {"name": "Github", "url": "https://github.com/009kings/"},
     {"name": "LinkedIn", "url": "https://www.linkedin.com/in/sarah-king-wang-shasha/"},
     {"name": "Email", "url": "009kings@gmail.com"},
-    {"name": "Resume", "url": "style/assets/Sarah_King_Resume.pdf"}
+    {"name": "Resume", "url": "style/assets/Sarah_King_Resume.docx"}
   ]
 }
