@@ -16,9 +16,9 @@
 .splash-text {
   font-family: 'Bungee Shade', cursive;
   text-align: right;
-  font-size: 6em;
+  font-size: 5.5em;
   padding: 1rem 0;
-  transform: scaleY(2);
+  transform: scaleY(2.6);
 }
 
 .splash-text-subtle {
@@ -32,6 +32,7 @@
 @media screen and (min-width: 500px) {
   .splash-text {
     font-size: 20vw;
+    transform: scaleY(2);
   }
   
   .splash-text-subtle {
@@ -39,9 +40,10 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .splash-text {
     font-size: 181px;
+    transform: scaleY(1.75);
   }
   
   .splash-text-subtle {
