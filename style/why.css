@@ -67,7 +67,32 @@
 }
 
 /* --------------- Experience -------------- */
-.experience-list-item {
+.experience-list-item-context {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: .5em;
+  width: 100%;
+}
+
+.experience-list-item-context > p {
+  font-style: italic;
+}
+
+.experience-list-item-description {
+  width: 100%;
+}
+
+.experience-list-item-accomplishments > li {
+  list-style: inside;
+}
+
+.experience-list-item-accomplishments p {
+  display: inline;
+}
+
+/* --------------- Projects -------------- */
+.project-list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,18 +100,18 @@
   height: fit-content;
 }
 
-.experience-list-item-header {
+.project-list-item-header {
   font-size: 1.5em;
   font-family: 'Roboto Mono', monospace;
   padding-bottom: .25em;
   border-bottom: 3px solid chartreuse;
 }
 
-.experience-list-item-summary {
+.project-list-item-summary {
   text-indent: 2em;
 }
 
-.experience-list-item-tech {
+.project-list-item-tech {
   margin: 1em 0;
   width: 100%;
   display: flex;
@@ -95,7 +120,7 @@
   align-items: center;
 }
 
-.experience-list-item-tech-item {
+.project-list-item-tech-item {
   position: relative;
   width: fit-content;
   min-width: 6em;
@@ -103,7 +128,7 @@
   margin: 1em .5em;
 }
 
-.experience-list-item-tech-item-pizazz {
+.project-list-item-tech-item-pizazz {
   z-index: 0;
   position: absolute;
   top: 0;
@@ -117,7 +142,7 @@
   border-top: 4em solid rgba(0, 166, 255, 0.797);
 }
 
-.experience-list-item-tech-item-name {
+.project-list-item-tech-item-name {
   font-weight: 600;
   font-size: 1.1em;
   word-spacing: .2em;
@@ -130,13 +155,13 @@
   z-index: 3;
 }
 
-.experience-list-item-links {
+.project-list-item-links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.experience-list-item-link {
+.project-list-item-link {
   width: 7em;
   padding: .5em;
   margin: .5em;
@@ -159,7 +184,7 @@
   transition: box-shadow .2s ease-in-out;
 }
 
-.experience-list-item-link:hover {
+.project-list-item-link:hover {
   box-shadow: 2px 5px 4px rgba(118, 118, 118, 0.774);
 }
 

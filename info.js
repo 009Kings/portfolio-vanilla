@@ -156,7 +156,7 @@ const data = {
         "linkType": null
       }
     ],
-    "personalProjects": [
+    "personal": [
       {
         "title": "Seattle Gentrified",
         "summary": "This informational website about gentrification in Seattle (2019) was created as a collaboration with User Designers and a Data Scientist for General Assembly's 'Data for Good' Hackathon",

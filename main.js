@@ -44,34 +44,73 @@ setTimeout(() => {
 }, 5001)
 
 // --------- Why
-const makeSummary = project => {
+document.querySelector('.brand-statement p').textContent = data['brand_statement'];
+
+const makeExperienceSummary = experience => {
   let container = document.createElement('div');
-  container.className = 'experience-list-item';
+  container.className = 'project-list-item';
   // Header
   let header = document.createElement('header');
-  header.className = 'experience-list-item-header';
+  header.className = 'project-list-item-header';
+  header.textContent = experience.title;
+  // Company and Years
+  let contextContainer = document.createElement('div');
+  contextContainer.className = 'experience-list-item-context';
+  let context = new Array(2).fill(null).map(() => document.createElement('p'));
+  context[0].textContent = experience.company;
+  context[1].textContent = experience.years;
+  console.log('🔥')
+  console.log(context)
+  contextContainer.append(...context);
+  // Description
+  let descriptionContainer = document.createElement('div');
+  descriptionContainer.className = 'experience-list-item-description';
+  let summaryTxt = document.createElement('p');
+  summaryTxt.className = 'experience-list-item-daily';
+  summaryTxt.textContent = experience.description;
+  let accomplishments = document.createElement('ul');
+  accomplishments.className = 'experience-list-item-accomplishments';
+  experience.accomplishments.forEach(point => {
+    let pointLI = document.createElement('li');
+    let pointP = document.createElement('p');
+    pointP.textContent = point;
+    pointLI.append(pointP);
+    accomplishments.append(pointLI);
+  });
+  descriptionContainer.append(summaryTxt, accomplishments)
+
+  container.append(header, contextContainer, descriptionContainer)
+  return container
+}
+
+const makeProjectSummary = project => {
+  let container = document.createElement('div');
+  container.className = 'project-list-item';
+  // Header
+  let header = document.createElement('header');
+  header.className = 'project-list-item-header';
   header.textContent = project.title;
   container.append(header);
   // Summary
   if (project.summary) {
     let summary = document.createElement('p');
-    summary.className = 'experience-list-item-summary';
+    summary.className = 'project-list-item-summary';
     summary.textContent = project.summary;
     container.append(summary);
   }
   // Technologies Used
   let tech = document.createElement('div');
-  tech.className = 'experience-list-item-tech';
+  tech.className = 'project-list-item-tech';
   let techList = project.tech.map(item => {
     let techContainer = document.createElement('div');
-    techContainer.className = 'experience-list-item-tech-item';
+    techContainer.className = 'project-list-item-tech-item';
 
     let techPizazz = document.createElement('div');
-    techPizazz.className = 'experience-list-item-tech-item-pizazz';
+    techPizazz.className = 'project-list-item-tech-item-pizazz';
     techContainer.append(techPizazz);
 
     let techName = document.createElement('p');
-    techName.className = 'experience-list-item-tech-item-name';
+    techName.className = 'project-list-item-tech-item-name';
     techName.textContent = item;
     techContainer.append(techName)
 
@@ -79,24 +118,22 @@ const makeSummary = project => {
   })
   techList.forEach(elem => tech.append(elem));
   container.append(tech);
-  // Links
+  // Link
   let links = document.createElement('div');
-  links.className = 'experience-list-item-links';
+  links.className = 'project-list-item-links';
 
   let liveLink = document.createElement('a');
-  liveLink.className = `experience-list-item-link ${project.link ? '' : 'disabled'}`;
   liveLink.href = project.link
   liveLink.target = '_blank';
-  liveLink.textContent = 'Website';
-
-  let github = document.createElement('a');
-  github.className = `experience-list-item-link ${project.github ? '' : 'disabled'}`;
-  github.href = project.github;
-  github.target = '_blank';
-  github.textContent = 'Code'
+  if (project.link) {
+    liveLink.className = `project-list-item-link`;
+    liveLink.textContent = project.linkType === 'code' ? "Code" : "Website";
+  } else {
+    liveLink.className = `project-list-item-link disabled`;
+    liveLink.textContent = 'Unavailable'
+  }
 
   links.append(liveLink);
-  links.append(github);
   container.append(links);
 
   // Return it all
@@ -121,18 +158,21 @@ data.skills.forEach(skill => {
   }
 })
 
+let experienceItems = data.experience.map(makeExperienceSummary)
+document.querySelector('.experience-list').append(...experienceItems)
+
 for (const subj in data.programming) {
-  let expItems = data.programming[subj].map(makeSummary);
-  console.log(expItems)
+  let projectItems = data.programming[subj].map(makeProjectSummary);
+  console.log(projectItems)
   switch (subj) {
-    case 'freelance':
-      expItems.forEach(item => document.querySelector('.experience-list-Freelance').append(item));
+    case 'professional':
+      projectItems.forEach(item => document.querySelector('.project-list-Professional').append(item));
       break;
-    case 'projects':
-      expItems.forEach(item => document.querySelector('.experience-list-Projects').append(item));
+    case 'personal':
+      projectItems.forEach(item => document.querySelector('.project-list-Personal').append(item));
       break;
     case 'educational':
-      expItems.forEach(item => document.querySelector('.experience-list-Educational').append(item));
+      projectItems.forEach(item => document.querySelector('.project-list-Educational').append(item));
       break;
   }
 }
@@ -175,12 +215,12 @@ const displaySkills = () => {
   }
 }
 
-const displayExp = () => {
-  let ed = document.querySelector('.experience-list-Educational');
-  let proj = document.querySelector('.experience-list-Projects');
-  let fl = document.querySelector('.experience-list-Freelance');
+const displayProj = () => {
+  let ed = document.querySelector('.project-list-Educational');
+  let proj = document.querySelector('.project-list-Projects');
+  let fl = document.querySelector('.project-list-Freelance');
 
-  switch (expFilter.name) {
+  switch (projectFilter.name) {
     case 'Educational':
       ed.classList.remove('hidden');
       proj.classList.add('hidden');
@@ -204,19 +244,16 @@ const displayExp = () => {
   }
 }
 
-// Populate Experience
-
-
 // Filter click
 let skillFilter = {
   name: 'All',
   ref: document.querySelector('.skills .filter-btn')
 }
-let expFilter = {
+let projectFilter = {
   name: 'All',
-  ref: document.querySelector('.experience .filter-btn')
+  ref: document.querySelector('.projects .filter-btn')
 }
 
 document.querySelector('.skills .filters-container').addEventListener('click', e => setFilter(e, skillFilter, displaySkills))
 
-document.querySelector('.experience .filters-container').addEventListener('click', e => setFilter(e, expFilter, displayExp))
+document.querySelector('.projects .filters-container').addEventListener('click', e => setFilter(e, projectFilter, displayProj))
