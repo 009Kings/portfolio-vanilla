@@ -135,21 +135,21 @@ const data = {
     "professional": [
       {
         "title": "Legacy.com",
-        "summary": "Online obituary service",
-        "tech": ["React", "Django", "Jenkins", "SQL", "Python", "HTML", "CSS", "Javascript"],
+        "summary": "Online obituary service hosted on AWS and using Jenkins as the CI/CD tool. Primarily worked on the obituary listing and individual obituary pages as well as the relevant content management datebases.",
+        "tech": ["React", "Django", "Jenkins", "AWS", "SQL", "Python", "HTML", "CSS", "Javascript",],
         "photo": null,
         "link": "https://www.laurawally.com/",
         "linkType": "site"
       },{
         "title": "Laura Wally Johnston",
-        "summary": "Portfolio for freelance editor Laura Wally Johnston",
+        "summary": "Portfolio for freelance editor Laura Wally Johnston. Worked closely with client to create multiple iterations and continue to provide maintenance.",
         "tech": ["HTML", "CSS", "Javascript"],
         "photo": null,
         "link": "https://www.laurawally.com/",
         "linkType": "site"
       }, {
         "title": "Seattle Dharma Center",
-        "summary": "Website for teachings and information from Dzogchen Buddha Path's Seattle Sangha",
+        "summary": "Website for teachings and information from Dzogchen Buddha Path's Seattle Sangha group. Worked with client to create a simple informational page.",
         "tech": ["HTML", "CSS", "Javascript"],
         "photo": null,
         "link": null,
@@ -159,35 +159,35 @@ const data = {
     "personal": [
       {
         "title": "Seattle Gentrified",
-        "summary": "This informational website about gentrification in Seattle (2019) was created as a collaboration with User Designers and a Data Scientist for General Assembly's 'Data for Good' Hackathon",
+        "summary": "This informational website about gentrification in Seattle (2019) was created as a collaboration with User Designers and a Data Scientist for General Assembly's 'Data for Good' Hackathon.",
         "tech": ["React", "Mapbox", "Chart.js", "CSS"],
         "photo": null,
         "link": "http://seattle-gentrified.axelmagn.com/",
         "linkType": "site"
       }, {
         "title": "Dem Dice",
-        "summary": "Built a streamlined dice-rolling app with my own original art in order to develop my skills in user-centric design on mobile platforms",
+        "summary": "Built a streamlined dice-rolling app with my own original art in order to develop my skills in user-centric design on mobile platforms.",
         "tech": ["DART", "Flutter"],
         "photo": null,
         "link": "https://github.com/009Kings/Dem_Dice",
         "linkType": "code"
       }, {
         "title": "Syllaboard",
-        "summary": "Worked with a team of engineers to develop a learning management system for adult education classroom management",
+        "summary": "Worked with a team of engineers to develop a learning management system for adult education classroom management.",
         "tech": ["MongoDB", "TypeORM", "React", "Redux", "Material UI"],
         "photo": null,
         "link": "https://github.com/parkercouch/syllaboard-client",
         "linkType": "code"
       }, {
         "title": "Spellsword",
-        "summary": "A full stack web application that queries the DnD5e API to create and store spellbooks for Dungeons and Dragons characters to make spell management easier",
+        "summary": "A full stack web application that queries the DnD5e API to create and store spellbooks for Dungeons and Dragons characters to make spell management easier.",
         "tech": ["PostgreSQL", "Sequelize", "Node.js", "Express", "EJS"],
         "photo": null,
         "link": "https://github.com/009Kings/Spellsword",
         "linkType": "code"
       }, {
         "title": "Bee Free: Pollination Station",
-        "summary": "Play as a busy little bee pollinating flowers in this cute web platformer. With self-made art assets, this game can be enjoyed with challenge or in zen mode",
+        "summary": "Play as a busy little bee pollinating flowers in this cute web platformer. With self-made art assets, this game can be enjoyed with challenge or in zen mode.",
         "tech": ["HTML", "CSS", "Javascript", "HTML5 Canvas"],
         "photo": null,
         "link": "https://009kings.github.io/beeFree/",
@@ -197,26 +197,31 @@ const data = {
     "educational": [
       {
         "title": "Canvas Crawler",
+        "summary": "This lesson provides a more advanced look at integrating HTML, CSS, and Javascript by creating a simple game. Lesson includes in-depth instructions as well as vague prompts that encourage students to accomplish tasks for themselves.",
         "tech": ["HTML5 Canvas", "HTML", "Javascript"],
         "link": "https://github.com/WDI-SEA/canvas-crawler",
         "linkType": "code"
       }, {
         "title": "Intro to Python Concepts",
+        "summary": "This lesson provides learners with everything they need to know about basic Python development. While aimed for students migrating from Javascript to Python, it can be used by any person learning Python for the first time.",
         "tech": ["Python"],
         "link": null,
         "linkType": null
       }, {
         "title": "Scripting in Python",
+        "summary": "This lesson takes basic Python and describes how it is commonly used. It also goes more in depth into the concept of scripting and its common uses.",
         "tech": ["Python"],
         "link": null,
         "linkType": null
       }, {
         "title": "Intro to SQLAlchemy",
-        "tech": ["Python", "PostgreSQL", "SQLALchemy"],
+        "summary": "This lesson takes students who understand SQL and Python through creating a database to performing full CRUD and SQL specific commands using the SQLAlchemy ORM.",
+        "tech": ["Python", "SQL", "PostgreSQL", "SQLALchemy"],
         "link": null,
         "linkType": null
       }, {
         "title": "SQLAlchemy and Flask",
+        "summary": "This lesson builds on the Intro to SQLAlchemy lesson by integrating the ORM with a micro web framework. This introduces students to Flask using Node.js as a common reference. By the end of the lessons, students have a working API that can be used to perform CRUD operations on a SQL database.",
         "tech": ["Python", "PostgreSQL", "SQLALchemy", "Flask"],
         "link": null,
         "linkType": null
