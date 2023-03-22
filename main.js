@@ -59,8 +59,6 @@ const makeExperienceSummary = experience => {
   let context = new Array(2).fill(null).map(() => document.createElement('p'));
   context[0].textContent = experience.company;
   context[1].textContent = experience.years;
-  console.log('🔥')
-  console.log(context)
   contextContainer.append(...context);
   // Description
   let descriptionContainer = document.createElement('div');
@@ -163,7 +161,6 @@ document.querySelector('.experience-list').append(...experienceItems)
 
 for (const subj in data.programming) {
   let projectItems = data.programming[subj].map(makeProjectSummary);
-  console.log(projectItems)
   switch (subj) {
     case 'professional':
       projectItems.forEach(item => document.querySelector('.project-list-Professional').append(item));
@@ -217,8 +214,8 @@ const displaySkills = () => {
 
 const displayProj = () => {
   let ed = document.querySelector('.project-list-Educational');
-  let proj = document.querySelector('.project-list-Projects');
-  let fl = document.querySelector('.project-list-Freelance');
+  let proj = document.querySelector('.project-list-Personal');
+  let fl = document.querySelector('.project-list-Professional');
 
   switch (projectFilter.name) {
     case 'Educational':
@@ -226,12 +223,12 @@ const displayProj = () => {
       proj.classList.add('hidden');
       fl.classList.add('hidden');
       break;
-    case 'Projects':
+    case 'Personal':
       ed.classList.add('hidden');
       proj.classList.remove('hidden');
       fl.classList.add('hidden');
       break;
-    case 'Freelance':
+    case 'Professional':
       ed.classList.add('hidden');
       proj.classList.add('hidden');
       fl.classList.remove('hidden');
